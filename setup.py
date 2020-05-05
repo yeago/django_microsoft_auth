@@ -35,8 +35,7 @@ req_files = {
 
 requirements = {}
 for req, req_file in req_files.items():
-    reqs = parse_requirements(req_file, session="fake")
-    requirements[req] = [str(req.req) for req in reqs]
+    requirements[req] = parse_requirements(req_file)
 
 setup(
     name="django_microsoft_auth",
